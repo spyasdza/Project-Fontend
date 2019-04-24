@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+	<link rel="icon" href="pic/logo-test-black.png">
+	<title>Join JobProvider</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="css/main_style.css">
+</head>
+
+<body class="h-100">
+	<div id="app" class="h-100">
+		<div id="content" class="d-flex flex-column h-100">
+
+			<nav class="navbar navbar-expand-lg bg-dark navbar-dark bg-company-black">
+				<!-- Brand -->
+				<a class="navbar-brand ml-5" href="#"><img src="pic/logo-test-white.png" width="40"> JobProvider</a>
+
+				<!-- Toggler/collapsibe Button -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- Navbar links -->
+				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item dropdown mr-1">
+							<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+								Search
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Part-time Jobs</a>
+								<a class="dropdown-item" href="#">Internship</a>
+								<a class="dropdown-item" href="#">Unemployed</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">CreateJob</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">AddToUnemployed</a>
+						</li>
+					</ul>
+					
+					<ul class="navbar-nav mr-5">
+						<!-- <li class="nav-item">
+							<input class="form-control mr-sm-2" type="text" placeholder="Search">
+						</li> -->
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+								Sign up
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Student</a>
+								<a class="dropdown-item" href="#">Employer</a>
+							</div>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="#">Sign in</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Sign out</a>
+						</li>
+					</ul>
+				</div> 
+			</nav>
+
+			<div class="container flex-grow-1">
+				<article class="card-body mx-auto font-weight-bold" style="max-width: 500px;">
+					<form action="login.html" method="POST">
+					<h1>Join Us</h1>
+
+						<!-- username field -->
+						<div class="form-group">
+							<label for="user_id">Username:</label>
+							<input type="text" class="form-control" name="user_id" placeholder="Pick a Username" required>
+						</div>
+
+						<!-- password field -->
+						<div class="form-group">
+							<label for="pwd1">Password:</label>
+							<input type="password" class="form-control" name="pwd1" placeholder="Create a Password" required>
+						</div>
+
+						<!-- confirm password field -->
+						<div class="form-group">
+							<label for="pwd2">Confirm Password:</label>
+							<input type="password" class="form-control" name="pwd2" placeholder="Confirm your Password" required>
+						</div>
+
+						<!-- first name and last name -->
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="fname">First Name:</label>
+									<input type="text" class="form-control" name="fname" placeholder="First Name" required>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="lname">Last Name:</label>
+									<input type="text" class="form-control" name="lname" placeholder="Last Name" required>
+								</div>
+							</div>
+						</div>
+
+						<!-- gender and account type -->
+						<div class="row">
+							<div class="col-6">
+								<div class="form-group">
+								<label for="sel1">Gender:</label>
+									<select class="form-control" name="gender">
+										<option>Male</option>
+										<option>Female</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-6">
+								<div class="form-group">
+									<label for="sel2">Account Type:</label>
+									<select class="form-control" name="acctype">
+										<option>Student</option>
+										<option>Employer</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<!-- email field -->
+						<div class="form-group">
+							<label for="email">Email:</label>
+							<input type="email" class="form-control" name="email" placeholder="Email" required>
+						</div>							
+
+						<!-- phone -->
+						<div class="form-group">
+							<label for="phone">Phone:</label>
+							<input type="phone" class="form-control" name="phone" placeholder="Phone" maxlength="10" required>
+						</div>
+
+						<!-- submit button -->
+						<button type="submit" class="btn btn-success mt-1">Create Account</button>
+					</form>
+				</article>
+			</div>
+
+			<div class="footer">
+				<div class="container text-center text-lg-right">
+					<span class="text-muted">Contact: </span>
+					<a class="logo ml-1" href="https://www.facebook.com/spyasdza28" target="_blank"><img src="pic/fb.png" width="25"></a>
+					<!-- <a class="logo ml-1" href="www.facebook.com"><img src="pic/ig.png" width="25"></a> -->
+					<a class="logo ml-1" href="https://twitter.com/samuraidoggo" target="_blank"><img src="pic/tt.png" width="25"></a>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+	<script>
+		var vm = new Vue({
+			el: "#app",
+	
+			data:{
+				id: "",
+				pass: "",
+				confirm: "",
+				fname: "",
+				lname: "",
+				email: "",
+				phone: ""
+			},
+	
+			// methods:{
+			// 	regis: function(e) {
+			// 		if(this.id == "" || this.pass  == "" || this.confirm  == "" || this.fname  == "" || this.lname  == "" || this.email == "" || this.phone == ""){
+			// 			alert("กรุณากรอกข้อมูลให้ครบถ้วน");
+			// 			e.preventDefault();
+			// 		}
+			// 	}
+			// }
+		})
+	</script>
+</body>
+</html>
