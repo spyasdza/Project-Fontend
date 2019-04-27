@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+	<link rel="icon" href="pic/logo-test-black.png">
+	<title>Search Job</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="css/main_style.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<style>
+		body{
+			background-size: cover;
+			background-image: url("pic/job.png");
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			/* height: 100%; */
+			/* overflow: hidden; */
+		}
+		.btn{
+			border-radius: 0px;
+		}
+		.form-control{
+			border-radius: 0px;
+		}
+		.card{
+			background-color: rgba(255, 255, 255, 0.8);
+			/* border: 1px solid #17a2b8; */
+		}
+		.btn-dark{
+			border-top-left-radius: 16px;
+			border-bottom-left-radius: 16px;
+		}
+
+		.main{
+			-webkit-animation: fadein 1.5s;
+		}
+		@keyframes fadein {
+			from { opacity: 0; }
+			to   { opacity: 1; }
+		}
+	</style>
+
+</head>
+
+<body class="h-100">
+	<div id="app" class="h-100">
+		<div id="content" class="d-flex flex-column h-100">
+
+			<!-- Navbar -->
+			<nav class="navbar navbar-expand-xl bg-dark navbar-dark bg-company-black">
+				<!-- Brand -->
+				<a class="navbar-brand ml-5" href="search_job.html"><img src="pic/logo-test-white.png" width="40"> JobProvider</a>
+
+				<!-- Toggler/collapsibe Button -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- Navbar links -->
+				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					<!-- Left side link -->
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item dropdown mr-1">
+							<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+								Search
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="search_job.html">Jobs</a>
+								<a class="dropdown-item" href="search_unemp.html">Unemployed</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="manage_job.html">ManageJobs</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">AddToUnemployed</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">CancelUnemployed</a>
+						</li>
+					</ul>
+					
+					<!-- Right side link -->
+					<ul class="navbar-nav mr-5">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+								Sign up
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="register_student.html">Student</a>
+								<a class="dropdown-item" href="register_employer.html">Employer</a>
+							</div>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="login.html">Sign in</a>
+						</li>
+						<li class="nav-item dropdown mr-2">
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+								Setting
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="edit_profile_student.html">(S)Edit Profile</a>
+								<a class="dropdown-item" href="edit_profile_emp.html">(E)Edit Profile</a>
+								<a class="dropdown-item" href="#">Sign out</a>
+							</div>
+						</li>
+					</ul>
+				</div> 
+			</nav>
+
+			<!-- Main content -->
+			<div class="container flex-grow-1">
+				<!-- search box -->
+				<div class="container">
+						<div class="container my-5">
+								<div class="card-body mx-auto">
+										<h4 class="card-title text-center mb-5"><span class="font-weight-bold" style="color: #17a2b8;">Jobs</span> are waiting for you</h4>
+										<form action="" method="POST">
+											<div class="row justify-content-center no-gutters">
+												<div class="col-md-3 mt-1">
+													<select class="form-control" name="faculty">
+														<option value="" selected disabled>Faculty</option>
+														<option v-for="faculty in facultys">[[ faculty.faculty ]]</option>
+													</select>
+												</div>
+												<div class="col-md-2 mt-1">
+													<input type="number" class="form-control" name="age" placeholder="Age">
+												</div>
+												<div class="col-md-2 mt-1">
+														<select class="form-control" name="gender">
+															<option value="" selected disabled>Gender</option>
+															<option>Male</option>
+															<option>Female</option>
+														</select>
+												</div>
+												<div class="col-md-2 mt-1">
+														<input type="text" class="form-control" name="area" placeholder="Area">
+												</div>
+												<div class="col-md-2 mt-1">
+														<input type="number" class="form-control" name="salary" placeholder="Salary">
+												</div>
+												<div class="col-md-1 mt-1">
+														<button type="submit" class="btn btn-info"><span class="fa fa-search"></span> Search</button>
+												</div>
+											</div>
+										</form>
+								</div>
+						</div>
+				</div>
+
+				<!-- show Jobs list -->
+				<div class="container main">
+						<div class="row justify-content-center">
+							<div class="col-lg-6" v-for="job in jobs">
+								<div class="card shadow-sm my-2 d-flex flex-row">
+
+									<!-- flex item for job detail -->
+									<div class="card-body mr-auto">
+	
+										<h5 class="card-title">
+											<div>[[job.title]]</div>
+										</h5>
+	
+										<p class="card-text">
+											<small class="text-muted"><span class="fa fa-briefcase"></span> Type: [[job.type]],</small>
+											<small class="text-muted"><span class="fa fa-money"></span> Salary: [[job.salary]]</small><br/>
+											<small class="text-muted"><span class="fa fa-map-marker"></span> Address: [[job.address]]</small>
+										</p>
+									</div>
+
+									<!-- flex item for detail button (link to job detail) -->
+									<div class="card-text my-auto">
+										<a href="job_detail.html" class="btn btn-dark my-auto">Detail <span class="fa fa-chevron-right"></span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+			</div>
+
+			<!-- Footer -->
+			<div class="footer" style="background-color: white">
+				<div class="container text-center text-lg-right">
+					<a class="logo ml-1" href="https://www.it.kmitl.ac.th/th/" target="_blank"><img src="pic/it.png" height="30"></a>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+	<script>
+		var vm = new Vue({
+			el: "#app",
+			delimiters: ["[[", "]]"],
+			data:{
+				facultys: [
+					{'faculty':'วิศวกรรมศาสตร์'},
+					{'faculty':'สถาปัตยกรรมศาสตร์'},
+					{'faculty':'ครุศาสตร์อุตสาหกรรมและเทคโนโลยี'},
+					{'faculty':'เทคโนโลยีการเกษตร'},
+					{'faculty':'วิทยาศาสตร์'},
+					{'faculty':'อุตสาหกรรมเกษตร'},
+					{'faculty':'เทคโนโลยีสารสนเทศ'},
+					{'faculty':'วิทยาลัยนานาชาติ'},
+					{'faculty':'วิทยาลัยนาโนเทคโนโลยี'},
+					{'faculty':'วิทยาลัยนวัตกรรมการผลิตขั้นสูง'},
+					{'faculty':'การบริหารและจัดการ'},
+					{'faculty':'วิทยาลัยอุตสาหกรรมการบินนานาชาติ'},
+					{'faculty':'ศิลปศาสตร์'},
+					{'faculty':'แพทยศาสตร์'},
+					{'faculty':'วิทยาลัยวิศวกรรมสังคีต'},
+				],
+				jobs: [
+            {
+              id: 1,
+              title: "Thor: Ragnarok",
+							faculty: "เทคโนโลยีสารสนเทศ",
+							age: 20,
+              address: "FBTasdddddddddddddddddddd",
+              gender: "Male",
+              type: "Part Time",
+							salary: 15000,
+							detail: "bahbahbahabhbskdjbkgaskbkgksahf",
+							company: "eieiza"
+            },
+            {
+              id: 2,
+              title: "Wonder Woman",
+							faculty: "เทคโนโลยีสารสนเทศ",
+							age: 20,
+              address: "address",
+              gender: "Male",
+              type: "Part Time",
+							salary: 15000,
+							detail: "brah q q qqq q qqqq q q q ",
+							company: "eieiza"
+            },
+            {
+              id: 3,
+              title: "Guardians of the Galaxy Vol. 2",
+							faculty: "เทคโนโลยีสารสนเทศ",
+							age: 20,
+              address: "address",
+              gender: "Male",
+              type: "Part Time",
+							salary: 15000,
+							detail: "brah q q qqq q qqqq q q q ",
+							company: "eieiza"
+            },
+            {
+              id: 4,
+              title: "Logan",
+              faculty: "เทคโนโลยีสารสนเทศ",
+							age: 20,
+              address: "address",
+              gender: "Male",
+              type: "Internship",
+							salary: 20000,
+							detail: "Goaskd;skad;sja;dlk l;work24hrs",
+							company: "eieiza"
+            },]
+			},
+		})
+	</script>
+</body>
+</html>

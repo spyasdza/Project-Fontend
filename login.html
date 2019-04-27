@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+	<link rel="icon" href="pic/logo-test-black.png">
+	<title>JobProvider</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="css/main_style.css">
+	<style>
+		.main{
+			-webkit-animation: fadein 1.5s;
+		}
+		@keyframes fadein {
+			from { opacity: 0; }
+			to   { opacity: 1; }
+		}
+	</style>
+
+</head>
+
+<body class="h-100">
+	<div id="app" class="h-100">
+		<div id="content" class="d-flex flex-column h-100">
+
+			<!-- Navbar -->
+			<nav class="navbar navbar-expand-xl bg-dark navbar-dark bg-company-black">
+				<!-- Brand -->
+				<a class="navbar-brand ml-5" href="search_job.html"><img src="pic/logo-test-white.png" width="40"> JobProvider</a>
+
+				<!-- Toggler/collapsibe Button -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- Navbar links -->
+				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					<!-- Left side link -->
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item dropdown mr-1">
+							<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+								Search
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="search_job.html">Jobs</a>
+								<a class="dropdown-item" href="search_unemp.html">Unemployed</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="manage_job.html">ManageJobs</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">AddToUnemployed</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">CancelUnemployed</a>
+						</li>
+					</ul>
+					
+					<!-- Right side link -->
+					<ul class="navbar-nav mr-5">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+								Sign up
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="register_student.html">Student</a>
+								<a class="dropdown-item" href="register_employer.html">Employer</a>
+							</div>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="login.html">Sign in</a>
+						</li>
+						<li class="nav-item dropdown mr-2">
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+								Setting
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="edit_profile_student.html">(S)Edit Profile</a>
+								<a class="dropdown-item" href="edit_profile_emp.html">(E)Edit Profile</a>
+								<a class="dropdown-item" href="#">Sign out</a>
+							</div>
+						</li>
+					</ul>
+				</div> 
+			</nav>
+
+			<!-- Main content -->
+			<div class="container flex-grow-1">
+                <div class="row mt-5">
+                    <div class="col-lg-6">
+
+						<!-- Job Provider detail -->
+                        <div class="jumbotron my-5 main" style="background-color: white;">
+                            <div class="font-weight-bold" style="max-width: 500px;">
+                                <h1 class="display-4 mb-3">JobProvider</h1>
+                                <p class="text-muted">is a platfrom for <span style="color: orange">KMITL</span> students to fetch a job and for entrepeneur to provide them. 
+                                    It's part of our WEBPRO, DBSC and ISAD project
+                                    which this idea are the second idea that we find interesting and our professor approve it.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+
+						<!-- login form -->
+                        <div class="card my-5 shadow-sm">
+                            <div class="card-body font-weight-bold">
+                                <form action="main_screen.html" method="POST">
+                                <h1 class="text-center">Sign in</h1>
+
+                                    <!-- username field -->
+                                    <div class="form-group">
+                                        <label for="user_id">Username:</label>
+                                        <input type="text" class="form-control" name="user_id" placeholder="Username" required>
+                                    </div>
+
+                                    <!-- password field -->
+                                    <div class="form-group">
+                                        <label for="pwd1">Password:</label>
+                                        <input type="password" class="form-control" name="pwd" placeholder="Password" required>
+                                    </div>
+
+                                    
+                                    <!-- submit button -->
+                                    <button type="submit" class="btn btn-success mt-1">Sign in</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+
+			<!-- Footer -->
+			<div class="footer">
+				<div class="container text-center text-lg-right">
+					<a class="logo ml-1" href="https://www.it.kmitl.ac.th/th/" target="_blank"><img src="pic/it.png" height="30"></a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>
